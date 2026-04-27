@@ -1,0 +1,1210 @@
+<html lang="ru"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6ImVhNmYwY2RiYTEyYmRkMmU2NTE3MjQ1NmMxNjViYWQ0MTQzMWQxYjIiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxMDE0NzA1NTc1MTU1OTQzNzI4MyIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjX2IzZjMxZmQzZDAxZTJhNDRfaW5kZXguaHRtbC00NTIifSwiZXhwIjoxNzc3MzA5NjAwLCJpYXQiOjE3NzczMDYwMDAsImFsZyI6IlJTMjU2In0.bWs-38qh-g47_FIBhLnoSwpdLebIW9iswUl9taEHW6v9WIzUuS8uptQ2806HQmS9Gngrz0296vxLLWxv4s-y1BA646Ed1NaPfpT62nIm7QdyJ2OWlbPuOwAFLGvt7jrmhHeJAG-iSg6wkSPjjCCLj4xHNF39COyAlMJ6mEBhaZ4piuPtMnkQBC3i8yShldkcNPCi3KNywPsec7ATJmRDpl8OhmBeDxcRKefoovp6fwN1VJ-pwowOgrpgaauxcSpXSqTRPyElLygRzzv7hafAs0p1ofvJj9h9zAwE9G4k8aYoo_WEtR6sKj0oEkL5xzdR98Y2s6jVJKnSM1sUkM33rg","c_b3f31fd3d01e2a44_index.html-452")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){const d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);const c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{let a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){const b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{const c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){const c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{const c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){const c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);const e=yield c.blob();return new Promise((f,g)=>{const k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){let c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){const c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());let e;try{const f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){const b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");const c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;let c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){const c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{let g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){const g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){const b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{const e=d?(new URL(b,d||void 0)).toString():b;let f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){const [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;const c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c;const e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){const d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){const d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){let d=a.cssText;const c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){let g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];const b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){const d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){const g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}const d=new Set;b(a);return d}function ua(a,b){return t(function*(){const d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){const d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){const c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b);var e=yield wa(a,b);e=yield B(e);const f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=
+16384));f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;const c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){const a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){let b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){const b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);const f={type:"send",data:new Uint8Array(a)};let g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){const f=new MessageChannel;t=f.port1;const g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}const c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";let l=0,t=null,r=null,q=[];const F=new TextEncoder,
+G=new TextDecoder;c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{let a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});const I=function(){let a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{const g=Math.random()*
+16|0;return(f==="x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;
+(g=t)==null||g.postMessage(a)}};Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);const C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");const E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{const k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-2.5-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чарадор: Интерактивное приключение</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:italic,wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+        body { background-color: #020617; margin: 0; overflow-x: hidden; color: #e2e8f0; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-story { font-family: 'Old Standard TT', serif; }
+        .fade-in { animation: fadeIn 1s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .text-glow { text-shadow: 0 0 15px rgba(251, 191, 36, 0.4); }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.relative{position:relative}.z-10{z-index:10}.mb-12{margin-bottom:3rem}.mb-4{margin-bottom:1rem}.mt-12{margin-top:3rem}.flex{display:flex}.h-3{height:0.75rem}.min-h-\[500px\]{min-height:500px}.min-h-screen{min-height:100vh}.w-3{width:0.75rem}.w-full{width:100%}.max-w-xl{max-width:36rem}.flex-grow{flex-grow:1}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-6{gap:1.5rem}.overflow-hidden{overflow:hidden}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.border{border-width:1px}.border-amber-500\/30{border-color:rgb(245 158 11 / 0.3)}.border-white\/5{border-color:rgb(255 255 255 / 0.05)}.bg-\[\#020617\]{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-\[\#0f172a\]{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-amber-700\/10{background-color:rgb(180 83 9 / 0.1)}.p-4{padding:1rem}.p-8{padding:2rem}.px-12{padding-left:3rem;padding-right:3rem}.py-4{padding-top:1rem;padding-bottom:1rem}.text-center{text-align:center}.font-serif{font-family:ui-serif, Georgia, Cambria, "Times New Roman", Times, serif}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tracking-\[0\.3em\]{letter-spacing:0.3em}.tracking-\[0\.4em\]{letter-spacing:0.4em}.tracking-wide{letter-spacing:0.025em}.tracking-widest{letter-spacing:0.1em}.text-amber-200{--tw-text-opacity:1;color:rgb(253 230 138 / var(--tw-text-opacity, 1))}.text-amber-50{--tw-text-opacity:1;color:rgb(255 251 235 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-amber-700\/30:hover{background-color:rgb(180 83 9 / 0.3)}.hover\:text-amber-500:hover{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}@media (min-width: 768px){.md\:p-12{padding:3rem}}</style><script>"use strict";
+
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+var _React = React,
+  useState = _React.useState,
+  useEffect = _React.useEffect;
+var App = function App() {
+  var _useState = useState('START'),
+    _useState2 = _slicedToArray(_useState, 2),
+    gameState = _useState2[0],
+    setGameState = _useState2[1];
+  var _useState3 = useState(null),
+    _useState4 = _slicedToArray(_useState3, 2),
+    hero = _useState4[0],
+    setHero = _useState4[1];
+  var _useState5 = useState(100),
+    _useState6 = _slicedToArray(_useState5, 2),
+    spark = _useState6[0],
+    setSpark = _useState6[1];
+  var _useState7 = useState(1),
+    _useState8 = _slicedToArray(_useState7, 2),
+    chapter = _useState8[0],
+    setChapter = _useState8[1];
+  var _useState9 = useState([]),
+    _useState0 = _slicedToArray(_useState9, 2),
+    inventory = _useState0[0],
+    setInventory = _useState0[1];
+  var _useState1 = useState([]),
+    _useState10 = _slicedToArray(_useState1, 2),
+    log = _useState10[0],
+    setLog = _useState10[1];
+  var chapters = {
+    1: {
+      title: "Тень на террасе",
+      text: "Вечер в Дремуше был наполнен ароматом жасминового чая и теплой корицы. Но внезапно луна погасла. Ты чувствуешь, как холод Калта покалывает кожу сквозь шерстяную жилетку. Чай в чашке мгновенно покрывается коркой льда. Из тумана у реки Чаруши выплывают Смерги — безликие башни из копоти, пахнущие озоном и ледяной пылью.",
+      options: [{
+        label: "Использовать магию Фа",
+        effect: function effect() {
+          setSpark(function (prev) {
+            return Math.max(0, prev - 15);
+          });
+          addLog("Ты направляешь чистую энергию Фа. Тьма шипит и отступает, но ты чувствуешь, как часть твоей искры угасла.");
+          nextChapter();
+        }
+      }, {
+        label: "Спрятаться в корнях Мирина",
+        effect: function effect() {
+          addLog("Ты ныряешь в глубокую нору. Тень проходит мимо, но страх ледяным комом оседает в груди.");
+          nextChapter();
+        }
+      }]
+    },
+    2: {
+      title: "Плюшки под пеплом",
+      text: "Твой дом теперь кажется чужим. Любимые плюшки на столе превратились в серый прах. Воздух пахнет горечью. Нужно спешить к Обережному мосту, пока туман не скрыл тропу полностью.",
+      options: [{
+        label: "Забрать памятный амулет",
+        effect: function effect() {
+          setInventory(function (prev) {
+            return [].concat(_toConsumableArray(prev), ["Амулет Дома"]);
+          });
+          addLog("Ты спасаешь частичку прошлого. Тьма подбирается ближе.");
+          setSpark(function (prev) {
+            return Math.max(0, prev - 5);
+          });
+          nextChapter();
+        }
+      }, {
+        label: "Бежать к мосту",
+        effect: function effect() {
+          addLog("Ты успеваешь до того, как тропа окончательно исчезла в тумане.");
+          nextChapter();
+        }
+      }]
+    },
+    3: {
+      title: "Обережный мосток",
+      text: "Ручей Чаруша теперь похож на поток черной смолы. Мост скрипит, руны на его перилах едва светятся. Чтобы пройти, нужно пробудить древние знаки. Воздух здесь звенит от напряжения, а за спиной слышны тяжелые, влажные шаги Смергов.",
+      options: [{
+        label: "Активировать руны кровью и Фа",
+        effect: function effect() {
+          setSpark(function (prev) {
+            return Math.max(0, prev - 20);
+          });
+          addLog("Руны вспыхнули алым. Мост пропустил тебя, но силы покидают твоё маленькое тело.");
+          nextChapter();
+        }
+      }, {
+        label: "Попытаться проскользнуть незаметно",
+        effect: function effect() {
+          if (Math.random() > 0.5) {
+            addLog("Тебе повезло. Тени скользнули мимо, не заметив твоего дыхания.");
+          } else {
+            setSpark(function (prev) {
+              return Math.max(0, prev - 10);
+            });
+            addLog("Смерг задел тебя ледяным крылом. Ожог холода будет болеть долго.");
+          }
+          nextChapter();
+        }
+      }]
+    },
+    4: {
+      title: "Шепот берегини",
+      text: "В лесу ты встречаешь слабую Искру — это дух маленькой птицы, застрявший в ловушке Тьмы. Она молит о спасении, но Смерги уже окружают это место. Время уходит.",
+      options: [{
+        label: "Пожертвовать Искрой ради спасения",
+        effect: function effect() {
+          setSpark(function (prev) {
+            return Math.max(0, prev - 25);
+          });
+          setInventory(function (prev) {
+            return [].concat(_toConsumableArray(prev), ["Перо Света"]);
+          });
+          addLog("Дух спасен. В благодарность ты получаешь сияющее перо, которое согревает ладони.");
+          nextChapter();
+        }
+      }, {
+        label: "Оставить дух и спасаться самому",
+        effect: function effect() {
+          addLog("Ты уходишь. Тихий плач за спиной будет преследовать тебя в снах.");
+          nextChapter();
+        }
+      }]
+    },
+    5: {
+      title: "Черное яблоко",
+      text: "На краю леса ты находишь дерево, чьи плоды еще не полностью поглощены Калтом. Одно яблоко светится тусклым золотом под слоем копоти. Это след Огнесада. Магия в нем может восстановить твои силы или подпитать землю.",
+      options: [{
+        label: "Съесть яблоко (Восстановление)",
+        effect: function effect() {
+          setSpark(function (prev) {
+            return Math.min(100, prev + 30);
+          });
+          addLog("Тепло разливается по жилам. Ты чувствуешь прилив сил.");
+          nextChapter();
+        }
+      }, {
+        label: "Вернуть магию корням",
+        effect: function effect() {
+          addLog("Ты отдаешь свет земле. Мирин благодарно вздрагивает под твоими ногами.");
+          nextChapter();
+        }
+      }]
+    }
+  };
+  var addLog = function addLog(msg) {
+    return setLog(function (prev) {
+      return [msg].concat(_toConsumableArray(prev)).slice(0, 3);
+    });
+  };
+  var nextChapter = function nextChapter() {
+    if (chapters[chapter + 1]) setChapter(function (prev) {
+      return prev + 1;
+    });else setGameState('DEMO_END');
+  };
+  var selectHero = function selectHero(type) {
+    setHero(type);
+    setInventory(type === 'Дрыхала' ? ['Латар'] : ['Котел']);
+    setGameState('PLAYING');
+  };
+  var downloadSourceCode = function downloadSourceCode() {
+    var source = document.documentElement.outerHTML;
+    var blob = new Blob([source], {
+      type: 'text/html'
+    });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'index.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+  if (spark <= 0) return /*#__PURE__*/React.createElement("div", {
+    className: "min-h-screen bg-black text-blue-200 flex flex-col items-center justify-center p-8 text-center font-serif"
+  }, /*#__PURE__*/React.createElement("h1", {
+    className: "text-5xl mb-4"
+  }, "\u0412\u0435\u0447\u043D\u044B\u0439 \u0421\u043E\u043D"), /*#__PURE__*/React.createElement("p", {
+    className: "max-w-md italic opacity-70"
+  }, "\u0422\u0432\u043E\u044F \u0418\u0441\u043A\u0440\u0430 \u0443\u0433\u0430\u0441\u043B\u0430. \u0422\u0435\u043D\u044C \u041A\u0430\u043B\u0442\u0430 \u043F\u043E\u0433\u043B\u043E\u0442\u0438\u043B\u0430 \u0442\u0435\u0431\u044F..."), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return window.location.reload();
+    },
+    className: "mt-8 px-6 py-2 border border-blue-900 rounded hover:bg-blue-950 transition text-sm uppercase tracking-widest"
+  }, "\u041F\u0440\u043E\u0431\u0443\u0434\u0438\u0442\u044C\u0441\u044F"));
+  return /*#__PURE__*/React.createElement("div", {
+    className: "min-h-screen bg-[#020617] text-slate-200 flex flex-col items-center p-4 md:p-12"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "max-w-xl w-full bg-[#0f172a] rounded-3xl shadow-2xl border border-white/5 overflow-hidden flex flex-col"
+  }, gameState === 'PLAYING' && /*#__PURE__*/React.createElement("div", {
+    className: "bg-black/40 px-6 py-4 flex justify-between items-center border-b border-white/5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] uppercase tracking-[0.2em] text-amber-500 font-bold"
+  }, hero), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] uppercase tracking-widest text-slate-500"
+  }, "\u0418\u0441\u043A\u0440\u0430: ", spark, "%"), /*#__PURE__*/React.createElement("div", {
+    className: "w-20 h-1 bg-slate-800 rounded-full overflow-hidden"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "h-full bg-amber-500 transition-all duration-700",
+    style: {
+      width: "".concat(spark, "%")
+    }
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: "p-8 md:p-12 flex-grow flex flex-col justify-center min-h-[500px]"
+  }, gameState === 'START' && /*#__PURE__*/React.createElement("div", {
+    className: "text-center fade-in"
+  }, /*#__PURE__*/React.createElement("h1", {
+    className: "text-6xl font-serif mb-4 text-amber-50 text-glow"
+  }, "\u0427\u0430\u0440\u0430\u0434\u043E\u0440"), /*#__PURE__*/React.createElement("p", {
+    className: "text-slate-500 mb-12 font-story italic text-lg tracking-wide"
+  }, "\u041B\u0435\u0433\u0435\u043D\u0434\u0430 \u043E \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u043E\u043C \u0441\u0432\u0435\u0442\u0435 \u0432 \u0432\u0435\u043B\u0438\u043A\u043E\u0439 \u0422\u044C\u043C\u0435"), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-col items-center gap-6"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return setGameState('CHARACTER_SELECT');
+    },
+    className: "group relative px-12 py-4 bg-amber-700/10 border border-amber-500/30 rounded-full overflow-hidden hover:bg-amber-700/30 transition-all shadow-inner"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "relative z-10 font-bold uppercase tracking-[0.3em] text-amber-200 text-xs"
+  }, "\u041D\u0430\u0447\u0430\u0442\u044C \u043F\u0443\u0442\u044C")), /*#__PURE__*/React.createElement("button", {
+    onClick: downloadSourceCode,
+    className: "text-[10px] text-slate-600 hover:text-amber-500 uppercase tracking-widest transition-colors flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("svg", {
+    className: "w-3 h-3",
+    fill: "none",
+    stroke: "currentColor",
+    viewBox: "0 0 24 24"
+  }, /*#__PURE__*/React.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "2",
+    d: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+  })), "\u0421\u043A\u0430\u0447\u0430\u0442\u044C \u043A\u043E\u0434 \u0434\u043B\u044F GitHub"))), gameState === 'CHARACTER_SELECT' && /*#__PURE__*/React.createElement("div", {
+    className: "fade-in space-y-8 text-center"
+  }, /*#__PURE__*/React.createElement("h2", {
+    className: "text-2xl font-serif mb-4"
+  }, "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0432\u043E\u044E \u0441\u0443\u0434\u044C\u0431\u0443"), /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-6"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return selectHero('Дрыхала');
+    },
+    className: "p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-amber-500/50 transition-all text-left group"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-amber-400 font-bold mb-2 flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("span", null, "\uD83C\uDFB6 \u0414\u0440\u044B\u0445\u0430\u043B\u0430")), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm text-slate-400 font-story leading-relaxed"
+  }, "\u041C\u0443\u0437\u044B\u043A\u0430\u043D\u0442, \u0432\u043B\u0430\u0434\u0435\u044E\u0449\u0438\u0439 \u041B\u0430\u0442\u0430\u0440\u043E\u043C. \u0412\u0430\u0448\u0430 \u043C\u0430\u0433\u0438\u044F \u2014 \u0432 \u0437\u0432\u0443\u043A\u0430\u0445, \u0440\u0435\u0437\u043E\u043D\u0430\u043D\u0441\u0435 \u0438 \u0442\u043E\u043D\u043A\u0438\u0445 \u0447\u0443\u0432\u0441\u0442\u0432\u0430\u0445 \u043C\u0438\u0440\u0430.")), /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return selectHero('Бермяш');
+    },
+    className: "p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-amber-500/50 transition-all text-left group"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-amber-400 font-bold mb-2 flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("span", null, "\uD83C\uDF6F \u0411\u0435\u0440\u043C\u044F\u0448")), /*#__PURE__*/React.createElement("div", {
+    className: "text-sm text-slate-400 font-story leading-relaxed"
+  }, "\u0425\u0440\u0430\u043D\u0438\u0442\u0435\u043B\u044C \u0443\u044E\u0442\u0430 \u0441 \u0412\u043E\u043B\u0448\u0435\u0431\u043D\u044B\u043C \u041A\u043E\u0442\u043B\u043E\u043C. \u0412\u0430\u0448\u0430 \u0441\u0438\u043B\u0430 \u2014 \u0432 \u0441\u043E\u0437\u0438\u0434\u0430\u043D\u0438\u0438, \u0442\u0435\u043F\u043B\u0435 \u043E\u0447\u0430\u0433\u0430 \u0438 \u0437\u0430\u0449\u0438\u0442\u0435.")))), gameState === 'PLAYING' && /*#__PURE__*/React.createElement("div", {
+    className: "fade-in"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between items-center mb-6"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] text-amber-600 font-bold uppercase tracking-widest"
+  }, "\u0413\u043B\u0430\u0432\u0430 ", chapter, " \u0438\u0437 10"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] text-slate-600 font-bold uppercase tracking-widest"
+  }, "\u0418\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C: ", inventory.length)), /*#__PURE__*/React.createElement("h3", {
+    className: "text-3xl font-serif mb-6 text-white leading-tight"
+  }, chapters[chapter].title), /*#__PURE__*/React.createElement("p", {
+    className: "text-lg font-story italic leading-relaxed text-slate-300 mb-10 border-l-2 border-amber-500/20 pl-8"
+  }, chapters[chapter].text), /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-4"
+  }, chapters[chapter].options.map(function (opt, i) {
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      onClick: opt.effect,
+      className: "w-full py-5 px-8 bg-white/5 hover:bg-white/10 rounded-2xl text-left text-sm transition-all border border-white/5 hover:border-white/10 flex justify-between items-center group shadow-lg"
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "font-medium"
+    }, opt.label), /*#__PURE__*/React.createElement("span", {
+      className: "text-amber-500 opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0"
+    }, "\u2192"));
+  })), log.length > 0 && /*#__PURE__*/React.createElement("div", {
+    className: "mt-12 opacity-50 text-[10px] uppercase tracking-wider space-y-2 border-t border-white/5 pt-6"
+  }, log.map(function (m, i) {
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      className: "animate-in slide-in-from-left-4"
+    }, "\u2022 ", m);
+  }))), gameState === 'DEMO_END' && /*#__PURE__*/React.createElement("div", {
+    className: "text-center fade-in"
+  }, /*#__PURE__*/React.createElement("h2", {
+    className: "text-4xl font-serif text-amber-200 mb-6"
+  }, "\u0413\u0440\u0430\u043D\u0438\u0446\u0430 \u0425\u0435\u043B\u044C\u0433\u0430\u0440\u0430"), /*#__PURE__*/React.createElement("p", {
+    className: "text-slate-400 font-story italic mb-10 text-lg leading-relaxed"
+  }, "\u0422\u044B \u043F\u0440\u043E\u0448\u0435\u043B \u0447\u0435\u0440\u0435\u0437 \u0422\u0435\u043D\u044C \u0414\u0440\u0435\u043C\u0443\u0448\u0430 \u0438 \u043A\u043E\u0441\u043D\u0443\u043B\u0441\u044F \u043C\u0430\u0433\u0438\u0438 \u0417\u043E\u043B\u043E\u0442\u043E\u0433\u043E \u042F\u0431\u043B\u043E\u043A\u0430. \u0412\u043F\u0435\u0440\u0435\u0434\u0438 \u2014 \u043B\u0435\u0434\u044F\u043D\u044B\u0435 \u043F\u0443\u0441\u0442\u043E\u0448\u0438 \u041E\u0433\u043D\u0435\u043D\u043D\u044B\u0445 \u0437\u0435\u043C\u0435\u043B\u044C."), /*#__PURE__*/React.createElement("div", {
+    className: "bg-black/30 p-6 rounded-2xl mb-10 text-left"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-xs text-amber-600 font-bold uppercase mb-4 tracking-widest"
+  }, "\u0412\u0430\u0448\u0438 \u0434\u043E\u0441\u0442\u0438\u0436\u0435\u043D\u0438\u044F"), /*#__PURE__*/React.createElement("div", {
+    className: "space-y-2 text-sm text-slate-300"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between"
+  }, /*#__PURE__*/React.createElement("span", null, "\u0421\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 \u0438\u0441\u043A\u0440\u044B:"), " ", /*#__PURE__*/React.createElement("span", {
+    className: "text-amber-400 font-bold"
+  }, spark, "%")), /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between"
+  }, /*#__PURE__*/React.createElement("span", null, "\u0421\u043E\u0431\u0440\u0430\u043D\u043E \u0430\u0440\u0442\u0435\u0444\u0430\u043A\u0442\u043E\u0432:"), " ", /*#__PURE__*/React.createElement("span", {
+    className: "text-amber-400 font-bold"
+  }, inventory.join(', '))))), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-col items-center gap-6"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: function onClick() {
+      return window.location.reload();
+    },
+    className: "text-xs text-amber-500 uppercase tracking-widest hover:text-amber-400 transition-colors border-b border-amber-500/20 pb-1"
+  }, "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u043A \u0438\u0441\u0442\u043E\u043A\u0430\u043C"), /*#__PURE__*/React.createElement("button", {
+    onClick: downloadSourceCode,
+    className: "text-[10px] text-slate-600 hover:text-amber-500 uppercase tracking-widest transition-colors flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("svg", {
+    className: "w-3 h-3",
+    fill: "none",
+    stroke: "currentColor",
+    viewBox: "0 0 24 24"
+  }, /*#__PURE__*/React.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "2",
+    d: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+  })), "\u0421\u043A\u0430\u0447\u0430\u0442\u044C \u0444\u0438\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u043A\u043E\u0434"))))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-12 text-slate-700 text-[10px] uppercase tracking-[0.4em] font-bold text-center"
+  }, "\u0427\u0430\u0440\u0430\u0434\u043E\u0440 \u2022 \u0425\u0440\u043E\u043D\u0438\u043A\u0438 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0445 \u0433\u0435\u0440\u043E\u0435\u0432"));
+};
+var root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(/*#__PURE__*/React.createElement(App, null));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfUmVhY3QiLCJSZWFjdCIsInVzZVN0YXRlIiwidXNlRWZmZWN0IiwiQXBwIiwiX3VzZVN0YXRlIiwiX3VzZVN0YXRlMiIsIl9zbGljZWRUb0FycmF5IiwiZ2FtZVN0YXRlIiwic2V0R2FtZVN0YXRlIiwiX3VzZVN0YXRlMyIsIl91c2VTdGF0ZTQiLCJoZXJvIiwic2V0SGVybyIsIl91c2VTdGF0ZTUiLCJfdXNlU3RhdGU2Iiwic3BhcmsiLCJzZXRTcGFyayIsIl91c2VTdGF0ZTciLCJfdXNlU3RhdGU4IiwiY2hhcHRlciIsInNldENoYXB0ZXIiLCJfdXNlU3RhdGU5IiwiX3VzZVN0YXRlMCIsImludmVudG9yeSIsInNldEludmVudG9yeSIsIl91c2VTdGF0ZTEiLCJfdXNlU3RhdGUxMCIsImxvZyIsInNldExvZyIsImNoYXB0ZXJzIiwidGl0bGUiLCJ0ZXh0Iiwib3B0aW9ucyIsImxhYmVsIiwiZWZmZWN0IiwicHJldiIsIk1hdGgiLCJtYXgiLCJhZGRMb2ciLCJuZXh0Q2hhcHRlciIsImNvbmNhdCIsIl90b0NvbnN1bWFibGVBcnJheSIsInJhbmRvbSIsIm1pbiIsIm1zZyIsInNsaWNlIiwic2VsZWN0SGVybyIsInR5cGUiLCJkb3dubG9hZFNvdXJjZUNvZGUiLCJzb3VyY2UiLCJkb2N1bWVudCIsImRvY3VtZW50RWxlbWVudCIsIm91dGVySFRNTCIsImJsb2IiLCJCbG9iIiwidXJsIiwiVVJMIiwiY3JlYXRlT2JqZWN0VVJMIiwiYSIsImNyZWF0ZUVsZW1lbnQiLCJocmVmIiwiZG93bmxvYWQiLCJib2R5IiwiYXBwZW5kQ2hpbGQiLCJjbGljayIsInJlbW92ZUNoaWxkIiwicmV2b2tlT2JqZWN0VVJMIiwiY2xhc3NOYW1lIiwib25DbGljayIsIndpbmRvdyIsImxvY2F0aW9uIiwicmVsb2FkIiwic3R5bGUiLCJ3aWR0aCIsImZpbGwiLCJzdHJva2UiLCJ2aWV3Qm94Iiwic3Ryb2tlTGluZWNhcCIsInN0cm9rZUxpbmVqb2luIiwic3Ryb2tlV2lkdGgiLCJkIiwibGVuZ3RoIiwibWFwIiwib3B0IiwiaSIsImtleSIsIm0iLCJqb2luIiwicm9vdCIsIlJlYWN0RE9NIiwiY3JlYXRlUm9vdCIsImdldEVsZW1lbnRCeUlkIiwicmVuZGVyIl0sInNvdXJjZXMiOlsiSW5saW5lIEJhYmVsIHNjcmlwdCJdLCJzb3VyY2VzQ29udGVudCI6WyJcbiAgICAgICAgY29uc3QgeyB1c2VTdGF0ZSwgdXNlRWZmZWN0IH0gPSBSZWFjdDtcblxuICAgICAgICBjb25zdCBBcHAgPSAoKSA9PiB7XG4gICAgICAgICAgICBjb25zdCBbZ2FtZVN0YXRlLCBzZXRHYW1lU3RhdGVdID0gdXNlU3RhdGUoJ1NUQVJUJyk7IFxuICAgICAgICAgICAgY29uc3QgW2hlcm8sIHNldEhlcm9dID0gdXNlU3RhdGUobnVsbCk7XG4gICAgICAgICAgICBjb25zdCBbc3BhcmssIHNldFNwYXJrXSA9IHVzZVN0YXRlKDEwMCk7XG4gICAgICAgICAgICBjb25zdCBbY2hhcHRlciwgc2V0Q2hhcHRlcl0gPSB1c2VTdGF0ZSgxKTtcbiAgICAgICAgICAgIGNvbnN0IFtpbnZlbnRvcnksIHNldEludmVudG9yeV0gPSB1c2VTdGF0ZShbXSk7XG4gICAgICAgICAgICBjb25zdCBbbG9nLCBzZXRMb2ddID0gdXNlU3RhdGUoW10pO1xuXG4gICAgICAgICAgICBjb25zdCBjaGFwdGVycyA9IHtcbiAgICAgICAgICAgICAgICAxOiB7XG4gICAgICAgICAgICAgICAgICAgIHRpdGxlOiBcItCi0LXQvdGMINC90LAg0YLQtdGA0YDQsNGB0LVcIixcbiAgICAgICAgICAgICAgICAgICAgdGV4dDogXCLQktC10YfQtdGAINCyINCU0YDQtdC80YPRiNC1INCx0YvQuyDQvdCw0L/QvtC70L3QtdC9INCw0YDQvtC80LDRgtC+0Lwg0LbQsNGB0LzQuNC90L7QstC+0LPQviDRh9Cw0Y8g0Lgg0YLQtdC/0LvQvtC5INC60L7RgNC40YbRiy4g0J3QviDQstC90LXQt9Cw0L/QvdC+INC70YPQvdCwINC/0L7Qs9Cw0YHQu9CwLiDQotGLINGH0YPQstGB0YLQstGD0LXRiNGMLCDQutCw0Log0YXQvtC70L7QtCDQmtCw0LvRgtCwINC/0L7QutCw0LvRi9Cy0LDQtdGCINC60L7QttGDINGB0LrQstC+0LfRjCDRiNC10YDRgdGC0Y/QvdGD0Y4g0LbQuNC70LXRgtC60YMuINCn0LDQuSDQsiDRh9Cw0YjQutC1INC80LPQvdC+0LLQtdC90L3QviDQv9C+0LrRgNGL0LLQsNC10YLRgdGPINC60L7RgNC60L7QuSDQu9GM0LTQsC4g0JjQtyDRgtGD0LzQsNC90LAg0YMg0YDQtdC60Lgg0KfQsNGA0YPRiNC4INCy0YvQv9C70YvQstCw0Y7RgiDQodC80LXRgNCz0Lgg4oCUINCx0LXQt9C70LjQutC40LUg0LHQsNGI0L3QuCDQuNC3INC60L7Qv9C+0YLQuCwg0L/QsNGF0L3Rg9GJ0LjQtSDQvtC30L7QvdC+0Lwg0Lgg0LvQtdC00Y/QvdC+0Lkg0L/Ri9C70YzRji5cIixcbiAgICAgICAgICAgICAgICAgICAgb3B0aW9uczogW1xuICAgICAgICAgICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxhYmVsOiBcItCY0YHQv9C+0LvRjNC30L7QstCw0YLRjCDQvNCw0LPQuNGOINCk0LBcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlZmZlY3Q6ICgpID0+IHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2V0U3BhcmsocHJldiA9PiBNYXRoLm1heCgwLCBwcmV2IC0gMTUpKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYWRkTG9nKFwi0KLRiyDQvdCw0L/RgNCw0LLQu9GP0LXRiNGMINGH0LjRgdGC0YPRjiDRjdC90LXRgNCz0LjRjiDQpNCwLiDQotGM0LzQsCDRiNC40L/QuNGCINC4INC+0YLRgdGC0YPQv9Cw0LXRgiwg0L3QviDRgtGLINGH0YPQstGB0YLQstGD0LXRiNGMLCDQutCw0Log0YfQsNGB0YLRjCDRgtCy0L7QtdC5INC40YHQutGA0Ysg0YPQs9Cw0YHQu9CwLlwiKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmV4dENoYXB0ZXIoKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxhYmVsOiBcItCh0L/RgNGP0YLQsNGC0YzRgdGPINCyINC60L7RgNC90Y/RhSDQnNC40YDQuNC90LBcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlZmZlY3Q6ICgpID0+IHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYWRkTG9nKFwi0KLRiyDQvdGL0YDRj9C10YjRjCDQsiDQs9C70YPQsdC+0LrRg9GOINC90L7RgNGDLiDQotC10L3RjCDQv9GA0L7RhdC+0LTQuNGCINC80LjQvNC+LCDQvdC+INGB0YLRgNCw0YUg0LvQtdC00Y/QvdGL0Lwg0LrQvtC80L7QvCDQvtGB0LXQtNCw0LXRgiDQsiDQs9GA0YPQtNC4LlwiKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmV4dENoYXB0ZXIoKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIF1cbiAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIDI6IHtcbiAgICAgICAgICAgICAgICAgICAgdGl0bGU6IFwi0J/Qu9GO0YjQutC4INC/0L7QtCDQv9C10L/Qu9C+0LxcIixcbiAgICAgICAgICAgICAgICAgICAgdGV4dDogXCLQotCy0L7QuSDQtNC+0Lwg0YLQtdC/0LXRgNGMINC60LDQttC10YLRgdGPINGH0YPQttC40LwuINCb0Y7QsdC40LzRi9C1INC/0LvRjtGI0LrQuCDQvdCwINGB0YLQvtC70LUg0L/RgNC10LLRgNCw0YLQuNC70LjRgdGMINCyINGB0LXRgNGL0Lkg0L/RgNCw0YUuINCS0L7Qt9C00YPRhSDQv9Cw0YXQvdC10YIg0LPQvtGA0LXRh9GM0Y4uINCd0YPQttC90L4g0YHQv9C10YjQuNGC0Ywg0Log0J7QsdC10YDQtdC20L3QvtC80YMg0LzQvtGB0YLRgywg0L/QvtC60LAg0YLRg9C80LDQvSDQvdC1INGB0LrRgNGL0Lsg0YLRgNC+0L/RgyDQv9C+0LvQvdC+0YHRgtGM0Y4uXCIsXG4gICAgICAgICAgICAgICAgICAgIG9wdGlvbnM6IFtcbiAgICAgICAgICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsYWJlbDogXCLQl9Cw0LHRgNCw0YLRjCDQv9Cw0LzRj9GC0L3Ri9C5INCw0LzRg9C70LXRglwiLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVmZmVjdDogKCkgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzZXRJbnZlbnRvcnkocHJldiA9PiBbLi4ucHJldiwgXCLQkNC80YPQu9C10YIg0JTQvtC80LBcIl0pO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhZGRMb2coXCLQotGLINGB0L/QsNGB0LDQtdGI0Ywg0YfQsNGB0YLQuNGH0LrRgyDQv9GA0L7RiNC70L7Qs9C+LiDQotGM0LzQsCDQv9C+0LTQsdC40YDQsNC10YLRgdGPINCx0LvQuNC20LUuXCIpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzZXRTcGFyayhwcmV2ID0+IE1hdGgubWF4KDAsIHByZXYgLSA1KSk7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5leHRDaGFwdGVyKCk7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsYWJlbDogXCLQkdC10LbQsNGC0Ywg0Log0LzQvtGB0YLRg1wiLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVmZmVjdDogKCkgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhZGRMb2coXCLQotGLINGD0YHQv9C10LLQsNC10YjRjCDQtNC+INGC0L7Qs9C+LCDQutCw0Log0YLRgNC+0L/QsCDQvtC60L7QvdGH0LDRgtC10LvRjNC90L4g0LjRgdGH0LXQt9C70LAg0LIg0YLRg9C80LDQvdC1LlwiKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmV4dENoYXB0ZXIoKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgICAgIF1cbiAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIDM6IHtcbiAgICAgICAgICAgICAgICAgICAgdGl0bGU6IFwi0J7QsdC10YDQtdC20L3Ri9C5INC80L7RgdGC0L7QulwiLFxuICAgICAgICAgICAgICAgICAgICB0ZXh0OiBcItCg0YPRh9C10Lkg0KfQsNGA0YPRiNCwINGC0LXQv9C10YDRjCDQv9C+0YXQvtC2INC90LAg0L/QvtGC0L7QuiDRh9C10YDQvdC+0Lkg0YHQvNC+0LvRiy4g0JzQvtGB0YIg0YHQutGA0LjQv9C40YIsINGA0YPQvdGLINC90LAg0LXQs9C+INC/0LXRgNC40LvQsNGFINC10LTQstCwINGB0LLQtdGC0Y/RgtGB0Y8uINCn0YLQvtCx0Ysg0L/RgNC+0LnRgtC4LCDQvdGD0LbQvdC+INC/0YDQvtCx0YPQtNC40YLRjCDQtNGA0LXQstC90LjQtSDQt9C90LDQutC4LiDQktC+0LfQtNGD0YUg0LfQtNC10YHRjCDQt9Cy0LXQvdC40YIg0L7RgiDQvdCw0L/RgNGP0LbQtdC90LjRjywg0LAg0LfQsCDRgdC/0LjQvdC+0Lkg0YHQu9GL0YjQvdGLINGC0Y/QttC10LvRi9C1LCDQstC70LDQttC90YvQtSDRiNCw0LPQuCDQodC80LXRgNCz0L7Qsi5cIixcbiAgICAgICAgICAgICAgICAgICAgb3B0aW9uczogW1xuICAgICAgICAgICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxhYmVsOiBcItCQ0LrRgtC40LLQuNGA0L7QstCw0YLRjCDRgNGD0L3RiyDQutGA0L7QstGM0Y4g0Lgg0KTQsFwiLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVmZmVjdDogKCkgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzZXRTcGFyayhwcmV2ID0+IE1hdGgubWF4KDAsIHByZXYgLSAyMCkpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhZGRMb2coXCLQoNGD0L3RiyDQstGB0L/Ri9GF0L3Rg9C70Lgg0LDQu9GL0LwuINCc0L7RgdGCINC/0YDQvtC/0YPRgdGC0LjQuyDRgtC10LHRjywg0L3QviDRgdC40LvRiyDQv9C+0LrQuNC00LDRjtGCINGC0LLQvtGRINC80LDQu9C10L3RjNC60L7QtSDRgtC10LvQvi5cIik7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5leHRDaGFwdGVyKCk7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsYWJlbDogXCLQn9C+0L/Ri9GC0LDRgtGM0YHRjyDQv9GA0L7RgdC60L7Qu9GM0LfQvdGD0YLRjCDQvdC10LfQsNC80LXRgtC90L5cIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlZmZlY3Q6ICgpID0+IHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgKE1hdGgucmFuZG9tKCkgPiAwLjUpIHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFkZExvZyhcItCi0LXQsdC1INC/0L7QstC10LfQu9C+LiDQotC10L3QuCDRgdC60L7Qu9GM0LfQvdGD0LvQuCDQvNC40LzQviwg0L3QtSDQt9Cw0LzQtdGC0LjQsiDRgtCy0L7QtdCz0L4g0LTRi9GF0LDQvdC40Y8uXCIpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2V0U3BhcmsocHJldiA9PiBNYXRoLm1heCgwLCBwcmV2IC0gMTApKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFkZExvZyhcItCh0LzQtdGA0LMg0LfQsNC00LXQuyDRgtC10LHRjyDQu9C10LTRj9C90YvQvCDQutGA0YvQu9C+0LwuINCe0LbQvtCzINGF0L7Qu9C+0LTQsCDQsdGD0LTQtdGCINCx0L7Qu9C10YLRjCDQtNC+0LvQs9C+LlwiKTtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZXh0Q2hhcHRlcigpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgXVxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgNDoge1xuICAgICAgICAgICAgICAgICAgICB0aXRsZTogXCLQqNC10L/QvtGCINCx0LXRgNC10LPQuNC90LhcIixcbiAgICAgICAgICAgICAgICAgICAgdGV4dDogXCLQkiDQu9C10YHRgyDRgtGLINCy0YHRgtGA0LXRh9Cw0LXRiNGMINGB0LvQsNCx0YPRjiDQmNGB0LrRgNGDIOKAlCDRjdGC0L4g0LTRg9GFINC80LDQu9C10L3RjNC60L7QuSDQv9GC0LjRhtGLLCDQt9Cw0YHRgtGA0Y/QstGI0LjQuSDQsiDQu9C+0LLRg9GI0LrQtSDQotGM0LzRiy4g0J7QvdCwINC80L7Qu9C40YIg0L4g0YHQv9Cw0YHQtdC90LjQuCwg0L3QviDQodC80LXRgNCz0Lgg0YPQttC1INC+0LrRgNGD0LbQsNGO0YIg0Y3RgtC+INC80LXRgdGC0L4uINCS0YDQtdC80Y8g0YPRhdC+0LTQuNGCLlwiLFxuICAgICAgICAgICAgICAgICAgICBvcHRpb25zOiBbXG4gICAgICAgICAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGFiZWw6IFwi0J/QvtC20LXRgNGC0LLQvtCy0LDRgtGMINCY0YHQutGA0L7QuSDRgNCw0LTQuCDRgdC/0LDRgdC10L3QuNGPXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZWZmZWN0OiAoKSA9PiB7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNldFNwYXJrKHByZXYgPT4gTWF0aC5tYXgoMCwgcHJldiAtIDI1KSk7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNldEludmVudG9yeShwcmV2ID0+IFsuLi5wcmV2LCBcItCf0LXRgNC+INCh0LLQtdGC0LBcIl0pO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhZGRMb2coXCLQlNGD0YUg0YHQv9Cw0YHQtdC9LiDQkiDQsdC70LDQs9C+0LTQsNGA0L3QvtGB0YLRjCDRgtGLINC/0L7Qu9GD0YfQsNC10YjRjCDRgdC40Y/RjtGJ0LXQtSDQv9C10YDQviwg0LrQvtGC0L7RgNC+0LUg0YHQvtCz0YDQtdCy0LDQtdGCINC70LDQtNC+0L3QuC5cIik7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5leHRDaGFwdGVyKCk7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsYWJlbDogXCLQntGB0YLQsNCy0LjRgtGMINC00YPRhSDQuCDRgdC/0LDRgdCw0YLRjNGB0Y8g0YHQsNC80L7QvNGDXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZWZmZWN0OiAoKSA9PiB7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFkZExvZyhcItCi0Ysg0YPRhdC+0LTQuNGI0YwuINCi0LjRhdC40Lkg0L/Qu9Cw0Ycg0LfQsCDRgdC/0LjQvdC+0Lkg0LHRg9C00LXRgiDQv9GA0LXRgdC70LXQtNC+0LLQsNGC0Ywg0YLQtdCx0Y8g0LIg0YHQvdCw0YUuXCIpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZXh0Q2hhcHRlcigpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgXVxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgNToge1xuICAgICAgICAgICAgICAgICAgICB0aXRsZTogXCLQp9C10YDQvdC+0LUg0Y/QsdC70L7QutC+XCIsXG4gICAgICAgICAgICAgICAgICAgIHRleHQ6IFwi0J3QsCDQutGA0LDRjiDQu9C10YHQsCDRgtGLINC90LDRhdC+0LTQuNGI0Ywg0LTQtdGA0LXQstC+LCDRh9GM0Lgg0L/Qu9C+0LTRiyDQtdGJ0LUg0L3QtSDQv9C+0LvQvdC+0YHRgtGM0Y4g0L/QvtCz0LvQvtGJ0LXQvdGLINCa0LDQu9GC0L7QvC4g0J7QtNC90L4g0Y/QsdC70L7QutC+INGB0LLQtdGC0LjRgtGB0Y8g0YLRg9GB0LrQu9GL0Lwg0LfQvtC70L7RgtC+0Lwg0L/QvtC0INGB0LvQvtC10Lwg0LrQvtC/0L7RgtC4LiDQrdGC0L4g0YHQu9C10LQg0J7Qs9C90LXRgdCw0LTQsC4g0JzQsNCz0LjRjyDQsiDQvdC10Lwg0LzQvtC20LXRgiDQstC+0YHRgdGC0LDQvdC+0LLQuNGC0Ywg0YLQstC+0Lgg0YHQuNC70Ysg0LjQu9C4INC/0L7QtNC/0LjRgtCw0YLRjCDQt9C10LzQu9GOLlwiLFxuICAgICAgICAgICAgICAgICAgICBvcHRpb25zOiBbXG4gICAgICAgICAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGFiZWw6IFwi0KHRitC10YHRgtGMINGP0LHQu9C+0LrQviAo0JLQvtGB0YHRgtCw0L3QvtCy0LvQtdC90LjQtSlcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlZmZlY3Q6ICgpID0+IHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2V0U3BhcmsocHJldiA9PiBNYXRoLm1pbigxMDAsIHByZXYgKyAzMCkpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhZGRMb2coXCLQotC10L/Qu9C+INGA0LDQt9C70LjQstCw0LXRgtGB0Y8g0L/QviDQttC40LvQsNC8LiDQotGLINGH0YPQstGB0YLQstGD0LXRiNGMINC/0YDQuNC70LjQsiDRgdC40LsuXCIpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZXh0Q2hhcHRlcigpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGFiZWw6IFwi0JLQtdGA0L3Rg9GC0Ywg0LzQsNCz0LjRjiDQutC+0YDQvdGP0LxcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlZmZlY3Q6ICgpID0+IHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYWRkTG9nKFwi0KLRiyDQvtGC0LTQsNC10YjRjCDRgdCy0LXRgiDQt9C10LzQu9C1LiDQnNC40YDQuNC9INCx0LvQsNCz0L7QtNCw0YDQvdC+INCy0LfQtNGA0LDQs9C40LLQsNC10YIg0L/QvtC0INGC0LLQvtC40LzQuCDQvdC+0LPQsNC80LguXCIpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZXh0Q2hhcHRlcigpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgXVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH07XG5cbiAgICAgICAgICAgIGNvbnN0IGFkZExvZyA9IChtc2cpID0+IHNldExvZyhwcmV2ID0+IFttc2csIC4uLnByZXZdLnNsaWNlKDAsIDMpKTtcblxuICAgICAgICAgICAgY29uc3QgbmV4dENoYXB0ZXIgPSAoKSA9PiB7XG4gICAgICAgICAgICAgICAgaWYgKGNoYXB0ZXJzW2NoYXB0ZXIgKyAxXSkgc2V0Q2hhcHRlcihwcmV2ID0+IHByZXYgKyAxKTtcbiAgICAgICAgICAgICAgICBlbHNlIHNldEdhbWVTdGF0ZSgnREVNT19FTkQnKTtcbiAgICAgICAgICAgIH07XG5cbiAgICAgICAgICAgIGNvbnN0IHNlbGVjdEhlcm8gPSAodHlwZSkgPT4ge1xuICAgICAgICAgICAgICAgIHNldEhlcm8odHlwZSk7XG4gICAgICAgICAgICAgICAgc2V0SW52ZW50b3J5KHR5cGUgPT09ICfQlNGA0YvRhdCw0LvQsCcgPyBbJ9Cb0LDRgtCw0YAnXSA6IFsn0JrQvtGC0LXQuyddKTtcbiAgICAgICAgICAgICAgICBzZXRHYW1lU3RhdGUoJ1BMQVlJTkcnKTtcbiAgICAgICAgICAgIH07XG5cbiAgICAgICAgICAgIGNvbnN0IGRvd25sb2FkU291cmNlQ29kZSA9ICgpID0+IHtcbiAgICAgICAgICAgICAgICBjb25zdCBzb3VyY2UgPSBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQub3V0ZXJIVE1MO1xuICAgICAgICAgICAgICAgIGNvbnN0IGJsb2IgPSBuZXcgQmxvYihbc291cmNlXSwgeyB0eXBlOiAndGV4dC9odG1sJyB9KTtcbiAgICAgICAgICAgICAgICBjb25zdCB1cmwgPSBVUkwuY3JlYXRlT2JqZWN0VVJMKGJsb2IpO1xuICAgICAgICAgICAgICAgIGNvbnN0IGEgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdhJyk7XG4gICAgICAgICAgICAgICAgYS5ocmVmID0gdXJsO1xuICAgICAgICAgICAgICAgIGEuZG93bmxvYWQgPSAnaW5kZXguaHRtbCc7XG4gICAgICAgICAgICAgICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTtcbiAgICAgICAgICAgICAgICBhLmNsaWNrKCk7XG4gICAgICAgICAgICAgICAgZG9jdW1lbnQuYm9keS5yZW1vdmVDaGlsZChhKTtcbiAgICAgICAgICAgICAgICBVUkwucmV2b2tlT2JqZWN0VVJMKHVybCk7XG4gICAgICAgICAgICB9O1xuXG4gICAgICAgICAgICBpZiAoc3BhcmsgPD0gMCkgcmV0dXJuIChcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1pbi1oLXNjcmVlbiBiZy1ibGFjayB0ZXh0LWJsdWUtMjAwIGZsZXggZmxleC1jb2wgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHAtOCB0ZXh0LWNlbnRlciBmb250LXNlcmlmXCI+XG4gICAgICAgICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJ0ZXh0LTV4bCBtYi00XCI+0JLQtdGH0L3Ri9C5INCh0L7QvTwvaDE+XG4gICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cIm1heC13LW1kIGl0YWxpYyBvcGFjaXR5LTcwXCI+0KLQstC+0Y8g0JjRgdC60YDQsCDRg9Cz0LDRgdC70LAuINCi0LXQvdGMINCa0LDQu9GC0LAg0L/QvtCz0LvQvtGC0LjQu9CwINGC0LXQsdGPLi4uPC9wPlxuICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9eygpID0+IHdpbmRvdy5sb2NhdGlvbi5yZWxvYWQoKX0gY2xhc3NOYW1lPVwibXQtOCBweC02IHB5LTIgYm9yZGVyIGJvcmRlci1ibHVlLTkwMCByb3VuZGVkIGhvdmVyOmJnLWJsdWUtOTUwIHRyYW5zaXRpb24gdGV4dC1zbSB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXN0XCI+0J/RgNC+0LHRg9C00LjRgtGM0YHRjzwvYnV0dG9uPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgKTtcblxuICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1pbi1oLXNjcmVlbiBiZy1bIzAyMDYxN10gdGV4dC1zbGF0ZS0yMDAgZmxleCBmbGV4LWNvbCBpdGVtcy1jZW50ZXIgcC00IG1kOnAtMTJcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYXgtdy14bCB3LWZ1bGwgYmctWyMwZjE3MmFdIHJvdW5kZWQtM3hsIHNoYWRvdy0yeGwgYm9yZGVyIGJvcmRlci13aGl0ZS81IG92ZXJmbG93LWhpZGRlbiBmbGV4IGZsZXgtY29sXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgIHtnYW1lU3RhdGUgPT09ICdQTEFZSU5HJyAmJiAoXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiZy1ibGFjay80MCBweC02IHB5LTQgZmxleCBqdXN0aWZ5LWJldHdlZW4gaXRlbXMtY2VudGVyIGJvcmRlci1iIGJvcmRlci13aGl0ZS81XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1bMTBweF0gdXBwZXJjYXNlIHRyYWNraW5nLVswLjJlbV0gdGV4dC1hbWJlci01MDAgZm9udC1ib2xkXCI+e2hlcm99PC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTRcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1bMTBweF0gdXBwZXJjYXNlIHRyYWNraW5nLXdpZGVzdCB0ZXh0LXNsYXRlLTUwMFwiPtCY0YHQutGA0LA6IHtzcGFya30lPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMjAgaC0xIGJnLXNsYXRlLTgwMCByb3VuZGVkLWZ1bGwgb3ZlcmZsb3ctaGlkZGVuXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJoLWZ1bGwgYmctYW1iZXItNTAwIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTcwMFwiIHN0eWxlPXt7d2lkdGg6IGAke3NwYXJrfSVgfX0+PC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICApfVxuXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInAtOCBtZDpwLTEyIGZsZXgtZ3JvdyBmbGV4IGZsZXgtY29sIGp1c3RpZnktY2VudGVyIG1pbi1oLVs1MDBweF1cIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7Z2FtZVN0YXRlID09PSAnU1RBUlQnICYmIChcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBmYWRlLWluXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aDEgY2xhc3NOYW1lPVwidGV4dC02eGwgZm9udC1zZXJpZiBtYi00IHRleHQtYW1iZXItNTAgdGV4dC1nbG93XCI+0KfQsNGA0LDQtNC+0YA8L2gxPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS01MDAgbWItMTIgZm9udC1zdG9yeSBpdGFsaWMgdGV4dC1sZyB0cmFja2luZy13aWRlXCI+0JvQtdCz0LXQvdC00LAg0L4g0LzQsNC70LXQvdGM0LrQvtC8INGB0LLQtdGC0LUg0LIg0LLQtdC70LjQutC+0Lkg0KLRjNC80LU8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggZmxleC1jb2wgaXRlbXMtY2VudGVyIGdhcC02XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiBzZXRHYW1lU3RhdGUoJ0NIQVJBQ1RFUl9TRUxFQ1QnKX0gY2xhc3NOYW1lPVwiZ3JvdXAgcmVsYXRpdmUgcHgtMTIgcHktNCBiZy1hbWJlci03MDAvMTAgYm9yZGVyIGJvcmRlci1hbWJlci01MDAvMzAgcm91bmRlZC1mdWxsIG92ZXJmbG93LWhpZGRlbiBob3ZlcjpiZy1hbWJlci03MDAvMzAgdHJhbnNpdGlvbi1hbGwgc2hhZG93LWlubmVyXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInJlbGF0aXZlIHotMTAgZm9udC1ib2xkIHVwcGVyY2FzZSB0cmFja2luZy1bMC4zZW1dIHRleHQtYW1iZXItMjAwIHRleHQteHNcIj7QndCw0YfQsNGC0Ywg0L/Rg9GC0Yw8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXtkb3dubG9hZFNvdXJjZUNvZGV9IGNsYXNzTmFtZT1cInRleHQtWzEwcHhdIHRleHQtc2xhdGUtNjAwIGhvdmVyOnRleHQtYW1iZXItNTAwIHVwcGVyY2FzZSB0cmFja2luZy13aWRlc3QgdHJhbnNpdGlvbi1jb2xvcnMgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN2ZyBjbGFzc05hbWU9XCJ3LTMgaC0zXCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCI+PHBhdGggc3Ryb2tlTGluZWNhcD1cInJvdW5kXCIgc3Ryb2tlTGluZWpvaW49XCJyb3VuZFwiIHN0cm9rZVdpZHRoPVwiMlwiIGQ9XCJNNCAxNnYxYTMgMyAwIDAwMyAzaDEwYTMgMyAwIDAwMy0zdi0xbS00LTRsLTQgNG0wIDBsLTQtNG00IDRWNFwiLz48L3N2Zz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg0KHQutCw0YfQsNGC0Ywg0LrQvtC0INC00LvRjyBHaXRIdWJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2J1dHRvbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICApfVxuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge2dhbWVTdGF0ZSA9PT0gJ0NIQVJBQ1RFUl9TRUxFQ1QnICYmIChcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmYWRlLWluIHNwYWNlLXktOCB0ZXh0LWNlbnRlclwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cInRleHQtMnhsIGZvbnQtc2VyaWYgbWItNFwiPtCS0YvQsdC10YDQuNGC0LUg0YHQstC+0Y4g0YHRg9C00YzQsdGDPC9oMj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBnYXAtNlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4gc2VsZWN0SGVybygn0JTRgNGL0YXQsNC70LAnKX0gY2xhc3NOYW1lPVwicC04IGJnLXdoaXRlLzUgcm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci13aGl0ZS81IGhvdmVyOmJvcmRlci1hbWJlci01MDAvNTAgdHJhbnNpdGlvbi1hbGwgdGV4dC1sZWZ0IGdyb3VwXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1hbWJlci00MDAgZm9udC1ib2xkIG1iLTIgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPvCfjrYg0JTRgNGL0YXQsNC70LA8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtc20gdGV4dC1zbGF0ZS00MDAgZm9udC1zdG9yeSBsZWFkaW5nLXJlbGF4ZWRcIj7QnNGD0LfRi9C60LDQvdGCLCDQstC70LDQtNC10Y7RidC40Lkg0JvQsNGC0LDRgNC+0LwuINCS0LDRiNCwINC80LDQs9C40Y8g4oCUINCyINC30LLRg9C60LDRhSwg0YDQtdC30L7QvdCw0L3RgdC1INC4INGC0L7QvdC60LjRhSDRh9GD0LLRgdGC0LLQsNGFINC80LjRgNCwLjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4gc2VsZWN0SGVybygn0JHQtdGA0LzRj9GIJyl9IGNsYXNzTmFtZT1cInAtOCBiZy13aGl0ZS81IHJvdW5kZWQtMnhsIGJvcmRlciBib3JkZXItd2hpdGUvNSBob3Zlcjpib3JkZXItYW1iZXItNTAwLzUwIHRyYW5zaXRpb24tYWxsIHRleHQtbGVmdCBncm91cFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtYW1iZXItNDAwIGZvbnQtYm9sZCBtYi0yIGZsZXggaXRlbXMtY2VudGVyIGdhcC0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3Bhbj7wn42vINCR0LXRgNC80Y/RiDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1zbSB0ZXh0LXNsYXRlLTQwMCBmb250LXN0b3J5IGxlYWRpbmctcmVsYXhlZFwiPtCl0YDQsNC90LjRgtC10LvRjCDRg9GO0YLQsCDRgSDQktC+0LvRiNC10LHQvdGL0Lwg0JrQvtGC0LvQvtC8LiDQktCw0YjQsCDRgdC40LvQsCDigJQg0LIg0YHQvtC30LjQtNCw0L3QuNC4LCDRgtC10L/Qu9C1INC+0YfQsNCz0LAg0Lgg0LfQsNGJ0LjRgtC1LjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICl9XG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7Z2FtZVN0YXRlID09PSAnUExBWUlORycgJiYgKFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZhZGUtaW5cIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBqdXN0aWZ5LWJldHdlZW4gaXRlbXMtY2VudGVyIG1iLTZcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtWzEwcHhdIHRleHQtYW1iZXItNjAwIGZvbnQtYm9sZCB1cHBlcmNhc2UgdHJhY2tpbmctd2lkZXN0XCI+0JPQu9Cw0LLQsCB7Y2hhcHRlcn0g0LjQtyAxMDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1bMTBweF0gdGV4dC1zbGF0ZS02MDAgZm9udC1ib2xkIHVwcGVyY2FzZSB0cmFja2luZy13aWRlc3RcIj7QmNC90LLQtdC90YLQsNGA0Yw6IHtpbnZlbnRvcnkubGVuZ3RofTwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC0zeGwgZm9udC1zZXJpZiBtYi02IHRleHQtd2hpdGUgbGVhZGluZy10aWdodFwiPntjaGFwdGVyc1tjaGFwdGVyXS50aXRsZX08L2gzPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LXN0b3J5IGl0YWxpYyBsZWFkaW5nLXJlbGF4ZWQgdGV4dC1zbGF0ZS0zMDAgbWItMTAgYm9yZGVyLWwtMiBib3JkZXItYW1iZXItNTAwLzIwIHBsLThcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7Y2hhcHRlcnNbY2hhcHRlcl0udGV4dH1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBnYXAtNFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHtjaGFwdGVyc1tjaGFwdGVyXS5vcHRpb25zLm1hcCgob3B0LCBpKSA9PiAoXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24ga2V5PXtpfSBvbkNsaWNrPXtvcHQuZWZmZWN0fSBjbGFzc05hbWU9XCJ3LWZ1bGwgcHktNSBweC04IGJnLXdoaXRlLzUgaG92ZXI6Ymctd2hpdGUvMTAgcm91bmRlZC0yeGwgdGV4dC1sZWZ0IHRleHQtc20gdHJhbnNpdGlvbi1hbGwgYm9yZGVyIGJvcmRlci13aGl0ZS81IGhvdmVyOmJvcmRlci13aGl0ZS8xMCBmbGV4IGp1c3RpZnktYmV0d2VlbiBpdGVtcy1jZW50ZXIgZ3JvdXAgc2hhZG93LWxnXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJmb250LW1lZGl1bVwiPntvcHQubGFiZWx9PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1hbWJlci01MDAgb3BhY2l0eS0wIGdyb3VwLWhvdmVyOm9wYWNpdHktMTAwIHRyYW5zaXRpb24tYWxsIHRyYW5zbGF0ZS14LTIgZ3JvdXAtaG92ZXI6dHJhbnNsYXRlLXgtMFwiPuKGkjwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHtsb2cubGVuZ3RoID4gMCAmJiAoXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtdC0xMiBvcGFjaXR5LTUwIHRleHQtWzEwcHhdIHVwcGVyY2FzZSB0cmFja2luZy13aWRlciBzcGFjZS15LTIgYm9yZGVyLXQgYm9yZGVyLXdoaXRlLzUgcHQtNlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7bG9nLm1hcCgobSwgaSkgPT4gPGRpdiBrZXk9e2l9IGNsYXNzTmFtZT1cImFuaW1hdGUtaW4gc2xpZGUtaW4tZnJvbS1sZWZ0LTRcIj7igKIge219PC9kaXY+KX1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICl9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICl9XG5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7Z2FtZVN0YXRlID09PSAnREVNT19FTkQnICYmIChcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBmYWRlLWluXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwidGV4dC00eGwgZm9udC1zZXJpZiB0ZXh0LWFtYmVyLTIwMCBtYi02XCI+0JPRgNCw0L3QuNGG0LAg0KXQtdC70YzQs9Cw0YDQsDwvaDI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNsYXRlLTQwMCBmb250LXN0b3J5IGl0YWxpYyBtYi0xMCB0ZXh0LWxnIGxlYWRpbmctcmVsYXhlZFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgINCi0Ysg0L/RgNC+0YjQtdC7INGH0LXRgNC10Lcg0KLQtdC90Ywg0JTRgNC10LzRg9GI0LAg0Lgg0LrQvtGB0L3Rg9C70YHRjyDQvNCw0LPQuNC4INCX0L7Qu9C+0YLQvtCz0L4g0K/QsdC70L7QutCwLiDQktC/0LXRgNC10LTQuCDigJQg0LvQtdC00Y/QvdGL0LUg0L/Rg9GB0YLQvtGI0Lgg0J7Qs9C90LXQvdC90YvRhSDQt9C10LzQtdC70YwuXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLWJsYWNrLzMwIHAtNiByb3VuZGVkLTJ4bCBtYi0xMCB0ZXh0LWxlZnRcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1hbWJlci02MDAgZm9udC1ib2xkIHVwcGVyY2FzZSBtYi00IHRyYWNraW5nLXdpZGVzdFwiPtCS0LDRiNC4INC00L7RgdGC0LjQttC10L3QuNGPPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS15LTIgdGV4dC1zbSB0ZXh0LXNsYXRlLTMwMFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgganVzdGlmeS1iZXR3ZWVuXCI+PHNwYW4+0KHQvtGB0YLQvtGP0L3QuNC1INC40YHQutGA0Ys6PC9zcGFuPiA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWFtYmVyLTQwMCBmb250LWJvbGRcIj57c3Bhcmt9JTwvc3Bhbj48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGp1c3RpZnktYmV0d2VlblwiPjxzcGFuPtCh0L7QsdGA0LDQvdC+INCw0YDRgtC10YTQsNC60YLQvtCyOjwvc3Bhbj4gPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1hbWJlci00MDAgZm9udC1ib2xkXCI+e2ludmVudG9yeS5qb2luKCcsICcpfTwvc3Bhbj48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGZsZXgtY29sIGl0ZW1zLWNlbnRlciBnYXAtNlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17KCkgPT4gd2luZG93LmxvY2F0aW9uLnJlbG9hZCgpfSBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtYW1iZXItNTAwIHVwcGVyY2FzZSB0cmFja2luZy13aWRlc3QgaG92ZXI6dGV4dC1hbWJlci00MDAgdHJhbnNpdGlvbi1jb2xvcnMgYm9yZGVyLWIgYm9yZGVyLWFtYmVyLTUwMC8yMCBwYi0xXCI+0JLQtdGA0L3Rg9GC0YzRgdGPINC6INC40YHRgtC+0LrQsNC8PC9idXR0b24+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXtkb3dubG9hZFNvdXJjZUNvZGV9IGNsYXNzTmFtZT1cInRleHQtWzEwcHhdIHRleHQtc2xhdGUtNjAwIGhvdmVyOnRleHQtYW1iZXItNTAwIHVwcGVyY2FzZSB0cmFja2luZy13aWRlc3QgdHJhbnNpdGlvbi1jb2xvcnMgZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHN2ZyBjbGFzc05hbWU9XCJ3LTMgaC0zXCIgZmlsbD1cIm5vbmVcIiBzdHJva2U9XCJjdXJyZW50Q29sb3JcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCI+PHBhdGggc3Ryb2tlTGluZWNhcD1cInJvdW5kXCIgc3Ryb2tlTGluZWpvaW49XCJyb3VuZFwiIHN0cm9rZVdpZHRoPVwiMlwiIGQ9XCJNNCAxNnYxYTMgMyAwIDAwMyAzaDEwYTMgMyAwIDAwMy0zdi0xbS00LTRsLTQgNG0wIDBsLTQtNG00IDRWNFwiLz48L3N2Zz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg0KHQutCw0YfQsNGC0Ywg0YTQuNC90LDQu9GM0L3Ri9C5INC60L7QtFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICl9XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXQtMTIgdGV4dC1zbGF0ZS03MDAgdGV4dC1bMTBweF0gdXBwZXJjYXNlIHRyYWNraW5nLVswLjRlbV0gZm9udC1ib2xkIHRleHQtY2VudGVyXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICDQp9Cw0YDQsNC00L7RgCDigKIg0KXRgNC+0L3QuNC60Lgg0LzQsNC70LXQvdGM0LrQuNGFINCz0LXRgNC+0LXQslxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICk7XG4gICAgICAgIH07XG5cbiAgICAgICAgY29uc3Qgcm9vdCA9IFJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSk7XG4gICAgICAgIHJvb3QucmVuZGVyKDxBcHAgLz4pO1xuICAgICJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQ1EsSUFBQUEsTUFBQSxHQUFnQ0MsS0FBSztFQUE3QkMsUUFBUSxHQUFBRixNQUFBLENBQVJFLFFBQVE7RUFBRUMsU0FBUyxHQUFBSCxNQUFBLENBQVRHLFNBQVM7QUFFM0IsSUFBTUMsR0FBRyxHQUFHLFNBQU5BLEdBQUdBLENBQUEsRUFBUztFQUNkLElBQUFDLFNBQUEsR0FBa0NILFFBQVEsQ0FBQyxPQUFPLENBQUM7SUFBQUksVUFBQSxHQUFBQyxjQUFBLENBQUFGLFNBQUE7SUFBNUNHLFNBQVMsR0FBQUYsVUFBQTtJQUFFRyxZ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</script></head>
+<body>
+    <div id="root"><div class="min-h-screen bg-[#020617] text-slate-200 flex flex-col items-center p-4 md:p-12"><div class="max-w-xl w-full bg-[#0f172a] rounded-3xl shadow-2xl border border-white/5 overflow-hidden flex flex-col"><div class="p-8 md:p-12 flex-grow flex flex-col justify-center min-h-[500px]"><div class="text-center fade-in"><h1 class="text-6xl font-serif mb-4 text-amber-50 text-glow">Чарадор</h1><p class="text-slate-500 mb-12 font-story italic text-lg tracking-wide">Легенда о маленьком свете в великой Тьме</p><div class="flex flex-col items-center gap-6"><button class="group relative px-12 py-4 bg-amber-700/10 border border-amber-500/30 rounded-full overflow-hidden hover:bg-amber-700/30 transition-all shadow-inner"><span class="relative z-10 font-bold uppercase tracking-[0.3em] text-amber-200 text-xs">Начать путь</span></button><button class="text-[10px] text-slate-600 hover:text-amber-500 uppercase tracking-widest transition-colors flex items-center gap-2"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>Скачать код для GitHub</button></div></div></div></div><div class="mt-12 text-slate-700 text-[10px] uppercase tracking-[0.4em] font-bold text-center">Чарадор • Хроники маленьких героев</div></div></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const App = () => {
+            const [gameState, setGameState] = useState('START'); 
+            const [hero, setHero] = useState(null);
+            const [spark, setSpark] = useState(100);
+            const [chapter, setChapter] = useState(1);
+            const [inventory, setInventory] = useState([]);
+            const [log, setLog] = useState([]);
+
+            const chapters = {
+                1: {
+                    title: "Тень на террасе",
+                    text: "Вечер в Дремуше был наполнен ароматом жасминового чая и теплой корицы. Но внезапно луна погасла. Ты чувствуешь, как холод Калта покалывает кожу сквозь шерстяную жилетку. Чай в чашке мгновенно покрывается коркой льда. Из тумана у реки Чаруши выплывают Смерги — безликие башни из копоти, пахнущие озоном и ледяной пылью.",
+                    options: [
+                        {
+                            label: "Использовать магию Фа",
+                            effect: () => {
+                                setSpark(prev => Math.max(0, prev - 15));
+                                addLog("Ты направляешь чистую энергию Фа. Тьма шипит и отступает, но ты чувствуешь, как часть твоей искры угасла.");
+                                nextChapter();
+                            }
+                        },
+                        {
+                            label: "Спрятаться в корнях Мирина",
+                            effect: () => {
+                                addLog("Ты ныряешь в глубокую нору. Тень проходит мимо, но страх ледяным комом оседает в груди.");
+                                nextChapter();
+                            }
+                        }
+                    ]
+                },
+                2: {
+                    title: "Плюшки под пеплом",
+                    text: "Твой дом теперь кажется чужим. Любимые плюшки на столе превратились в серый прах. Воздух пахнет горечью. Нужно спешить к Обережному мосту, пока туман не скрыл тропу полностью.",
+                    options: [
+                        {
+                            label: "Забрать памятный амулет",
+                            effect: () => {
+                                setInventory(prev => [...prev, "Амулет Дома"]);
+                                addLog("Ты спасаешь частичку прошлого. Тьма подбирается ближе.");
+                                setSpark(prev => Math.max(0, prev - 5));
+                                nextChapter();
+                            }
+                        },
+                        {
+                            label: "Бежать к мосту",
+                            effect: () => {
+                                addLog("Ты успеваешь до того, как тропа окончательно исчезла в тумане.");
+                                nextChapter();
+                            }
+                        }
+                    ]
+                },
+                3: {
+                    title: "Обережный мосток",
+                    text: "Ручей Чаруша теперь похож на поток черной смолы. Мост скрипит, руны на его перилах едва светятся. Чтобы пройти, нужно пробудить древние знаки. Воздух здесь звенит от напряжения, а за спиной слышны тяжелые, влажные шаги Смергов.",
+                    options: [
+                        {
+                            label: "Активировать руны кровью и Фа",
+                            effect: () => {
+                                setSpark(prev => Math.max(0, prev - 20));
+                                addLog("Руны вспыхнули алым. Мост пропустил тебя, но силы покидают твоё маленькое тело.");
+                                nextChapter();
+                            }
+                        },
+                        {
+                            label: "Попытаться проскользнуть незаметно",
+                            effect: () => {
+                                if (Math.random() > 0.5) {
+                                    addLog("Тебе повезло. Тени скользнули мимо, не заметив твоего дыхания.");
+                                } else {
+                                    setSpark(prev => Math.max(0, prev - 10));
+                                    addLog("Смерг задел тебя ледяным крылом. Ожог холода будет болеть долго.");
+                                }
+                                nextChapter();
+                            }
+                        }
+                    ]
+                },
+                4: {
+                    title: "Шепот берегини",
+                    text: "В лесу ты встречаешь слабую Искру — это дух маленькой птицы, застрявший в ловушке Тьмы. Она молит о спасении, но Смерги уже окружают это место. Время уходит.",
+                    options: [
+                        {
+                            label: "Пожертвовать Искрой ради спасения",
+                            effect: () => {
+                                setSpark(prev => Math.max(0, prev - 25));
+                                setInventory(prev => [...prev, "Перо Света"]);
+                                addLog("Дух спасен. В благодарность ты получаешь сияющее перо, которое согревает ладони.");
+                                nextChapter();
+                            }
+                        },
+                        {
+                            label: "Оставить дух и спасаться самому",
+                            effect: () => {
+                                addLog("Ты уходишь. Тихий плач за спиной будет преследовать тебя в снах.");
+                                nextChapter();
+                            }
+                        }
+                    ]
+                },
+                5: {
+                    title: "Черное яблоко",
+                    text: "На краю леса ты находишь дерево, чьи плоды еще не полностью поглощены Калтом. Одно яблоко светится тусклым золотом под слоем копоти. Это след Огнесада. Магия в нем может восстановить твои силы или подпитать землю.",
+                    options: [
+                        {
+                            label: "Съесть яблоко (Восстановление)",
+                            effect: () => {
+                                setSpark(prev => Math.min(100, prev + 30));
+                                addLog("Тепло разливается по жилам. Ты чувствуешь прилив сил.");
+                                nextChapter();
+                            }
+                        },
+                        {
+                            label: "Вернуть магию корням",
+                            effect: () => {
+                                addLog("Ты отдаешь свет земле. Мирин благодарно вздрагивает под твоими ногами.");
+                                nextChapter();
+                            }
+                        }
+                    ]
+                }
+            };
+
+            const addLog = (msg) => setLog(prev => [msg, ...prev].slice(0, 3));
+
+            const nextChapter = () => {
+                if (chapters[chapter + 1]) setChapter(prev => prev + 1);
+                else setGameState('DEMO_END');
+            };
+
+            const selectHero = (type) => {
+                setHero(type);
+                setInventory(type === 'Дрыхала' ? ['Латар'] : ['Котел']);
+                setGameState('PLAYING');
+            };
+
+            const downloadSourceCode = () => {
+                const source = document.documentElement.outerHTML;
+                const blob = new Blob([source], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'index.html';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            };
+
+            if (spark <= 0) return (
+                <div className="min-h-screen bg-black text-blue-200 flex flex-col items-center justify-center p-8 text-center font-serif">
+                    <h1 className="text-5xl mb-4">Вечный Сон</h1>
+                    <p className="max-w-md italic opacity-70">Твоя Искра угасла. Тень Калта поглотила тебя...</p>
+                    <button onClick={() => window.location.reload()} className="mt-8 px-6 py-2 border border-blue-900 rounded hover:bg-blue-950 transition text-sm uppercase tracking-widest">Пробудиться</button>
+                </div>
+            );
+
+            return (
+                <div className="min-h-screen bg-[#020617] text-slate-200 flex flex-col items-center p-4 md:p-12">
+                    <div className="max-w-xl w-full bg-[#0f172a] rounded-3xl shadow-2xl border border-white/5 overflow-hidden flex flex-col">
+                        
+                        {gameState === 'PLAYING' && (
+                            <div className="bg-black/40 px-6 py-4 flex justify-between items-center border-b border-white/5">
+                                <div className="text-[10px] uppercase tracking-[0.2em] text-amber-500 font-bold">{hero}</div>
+                                <div className="flex items-center gap-4">
+                                    <div className="text-[10px] uppercase tracking-widest text-slate-500">Искра: {spark}%</div>
+                                    <div className="w-20 h-1 bg-slate-800 rounded-full overflow-hidden">
+                                        <div className="h-full bg-amber-500 transition-all duration-700" style={{width: `${spark}%`}}></div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        <div className="p-8 md:p-12 flex-grow flex flex-col justify-center min-h-[500px]">
+                            {gameState === 'START' && (
+                                <div className="text-center fade-in">
+                                    <h1 className="text-6xl font-serif mb-4 text-amber-50 text-glow">Чарадор</h1>
+                                    <p className="text-slate-500 mb-12 font-story italic text-lg tracking-wide">Легенда о маленьком свете в великой Тьме</p>
+                                    <div className="flex flex-col items-center gap-6">
+                                        <button onClick={() => setGameState('CHARACTER_SELECT')} className="group relative px-12 py-4 bg-amber-700/10 border border-amber-500/30 rounded-full overflow-hidden hover:bg-amber-700/30 transition-all shadow-inner">
+                                            <span className="relative z-10 font-bold uppercase tracking-[0.3em] text-amber-200 text-xs">Начать путь</span>
+                                        </button>
+                                        <button onClick={downloadSourceCode} className="text-[10px] text-slate-600 hover:text-amber-500 uppercase tracking-widest transition-colors flex items-center gap-2">
+                                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                            Скачать код для GitHub
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+
+                            {gameState === 'CHARACTER_SELECT' && (
+                                <div className="fade-in space-y-8 text-center">
+                                    <h2 className="text-2xl font-serif mb-4">Выберите свою судьбу</h2>
+                                    <div className="grid gap-6">
+                                        <button onClick={() => selectHero('Дрыхала')} className="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-amber-500/50 transition-all text-left group">
+                                            <div className="text-amber-400 font-bold mb-2 flex items-center gap-2">
+                                                <span>🎶 Дрыхала</span>
+                                            </div>
+                                            <div className="text-sm text-slate-400 font-story leading-relaxed">Музыкант, владеющий Латаром. Ваша магия — в звуках, резонансе и тонких чувствах мира.</div>
+                                        </button>
+                                        <button onClick={() => selectHero('Бермяш')} className="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-amber-500/50 transition-all text-left group">
+                                            <div className="text-amber-400 font-bold mb-2 flex items-center gap-2">
+                                                <span>🍯 Бермяш</span>
+                                            </div>
+                                            <div className="text-sm text-slate-400 font-story leading-relaxed">Хранитель уюта с Волшебным Котлом. Ваша сила — в созидании, тепле очага и защите.</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+
+                            {gameState === 'PLAYING' && (
+                                <div className="fade-in">
+                                    <div className="flex justify-between items-center mb-6">
+                                        <div className="text-[10px] text-amber-600 font-bold uppercase tracking-widest">Глава {chapter} из 10</div>
+                                        <div className="text-[10px] text-slate-600 font-bold uppercase tracking-widest">Инвентарь: {inventory.length}</div>
+                                    </div>
+                                    <h3 className="text-3xl font-serif mb-6 text-white leading-tight">{chapters[chapter].title}</h3>
+                                    <p className="text-lg font-story italic leading-relaxed text-slate-300 mb-10 border-l-2 border-amber-500/20 pl-8">
+                                        {chapters[chapter].text}
+                                    </p>
+                                    <div className="grid gap-4">
+                                        {chapters[chapter].options.map((opt, i) => (
+                                            <button key={i} onClick={opt.effect} className="w-full py-5 px-8 bg-white/5 hover:bg-white/10 rounded-2xl text-left text-sm transition-all border border-white/5 hover:border-white/10 flex justify-between items-center group shadow-lg">
+                                                <span className="font-medium">{opt.label}</span>
+                                                <span className="text-amber-500 opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0">→</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                    {log.length > 0 && (
+                                        <div className="mt-12 opacity-50 text-[10px] uppercase tracking-wider space-y-2 border-t border-white/5 pt-6">
+                                            {log.map((m, i) => <div key={i} className="animate-in slide-in-from-left-4">• {m}</div>)}
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
+                            {gameState === 'DEMO_END' && (
+                                <div className="text-center fade-in">
+                                    <h2 className="text-4xl font-serif text-amber-200 mb-6">Граница Хельгара</h2>
+                                    <p className="text-slate-400 font-story italic mb-10 text-lg leading-relaxed">
+                                        Ты прошел через Тень Дремуша и коснулся магии Золотого Яблока. Впереди — ледяные пустоши Огненных земель.
+                                    </p>
+                                    <div className="bg-black/30 p-6 rounded-2xl mb-10 text-left">
+                                        <div className="text-xs text-amber-600 font-bold uppercase mb-4 tracking-widest">Ваши достижения</div>
+                                        <div className="space-y-2 text-sm text-slate-300">
+                                            <div className="flex justify-between"><span>Состояние искры:</span> <span className="text-amber-400 font-bold">{spark}%</span></div>
+                                            <div className="flex justify-between"><span>Собрано артефактов:</span> <span className="text-amber-400 font-bold">{inventory.join(', ')}</span></div>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col items-center gap-6">
+                                        <button onClick={() => window.location.reload()} className="text-xs text-amber-500 uppercase tracking-widest hover:text-amber-400 transition-colors border-b border-amber-500/20 pb-1">Вернуться к истокам</button>
+                                        <button onClick={downloadSourceCode} className="text-[10px] text-slate-600 hover:text-amber-500 uppercase tracking-widest transition-colors flex items-center gap-2">
+                                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                            Скачать финальный код
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                    <div className="mt-12 text-slate-700 text-[10px] uppercase tracking-[0.4em] font-bold text-center">
+                        Чарадор • Хроники маленьких героев
+                    </div>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+
+</body></html>
